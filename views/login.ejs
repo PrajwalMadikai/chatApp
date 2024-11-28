@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Chat</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public/styles/style.css">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100  ">
+
+    <form class="form bg-white p-4   " style="max-width: 400px; width: 100%;" onsubmit="login()" >
+        <h4 class="text-center mb-4">Sign In</h4>
+        
+        <!-- Email Input -->
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <svg height="20" viewBox="0 0 32 32" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135 0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z"></path></svg>
+                </span>
+                <input type="email" id="email" class="form-control" placeholder="Enter your Email" required>
+            </div>
+        </div>
+
+        <!-- Password Input -->
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <svg height="20" viewBox="-64 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875 16-16 16zm0 0"></path></svg>
+                </span>
+                <input type="password" id="password" class="form-control" placeholder="Enter your Password" required>
+            </div>
+        </div>
+
+        <!-- Remember Me and Forgot Password -->
+        <div class="d-flex justify-content-between mb-3">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Remember me</label>
+            </div>
+            <a href="#" class="text-decoration-none text-primary">Forgot password?</a>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100 mb-2" >Sign In</button>
+
+        <!-- Sign Up Link -->
+        <p class="text-center">Don't have an account? <a href="signup" class="text-decoration-none text-primary">Sign Up</a></p>
+
+        <div class="text-center mb-2">Or With</div>
+
+        <!-- Social Media Login Buttons -->
+        <!-- <div class="d-flex justify-content-around">
+            <button type="button" class="btn btn-outline-dark d-flex align-items-center">
+                <svg version="1.1" width="20" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <path style="fill:#FBBB00;" d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
+                        c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
+                        C103.821,274.792,107.225,292.797,113.47,309.408z"></path>
+                    <path style="fill:#518EF8;" d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
+                        c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
+                        c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"></path>
+                    <path style="fill:#28B446;" d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
+                        c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
+                        c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"></path>
+                    <path style="fill:#F14336;" d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
+                        c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
+                        C318.115,0,375.068,22.126,419.404,58.936z"></path>
+                    
+                    </svg>
+                <span class="ms-2">Google</span>
+            </button>
+            <button type="button" class="btn btn-outline-dark d-flex align-items-center">
+                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M15.769..."></path></svg>
+                <span class="ms-2">Apple</span>
+            </button>
+        </div> -->
+    </form>
+
+    <!-- Bootstrap 5 JS CDN (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+   function login() {
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+
+    fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+    })
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error('Failed to fetch');
+        }
+        return response.json(); // Parse JSON if the response is okay
+    })
+    .then((data) => {
+        if (data.login) {
+            console.log('inside login');
+            window.location.href = '/chat';
+        } else if (data.noUser) {
+            console.log('No user found with the provided email.');
+            alert('No user found with the provided email.');
+        } else if (data.password) {
+            console.log('Incorrect password.');
+            alert('Incorrect password.');
+        } else {
+            console.log('Login failed for an unknown reason.');
+            alert('Unknown reason');
+        }
+    })
+    .catch((error) => {
+        console.error('An error occurred:', error);
+    });
+}
+
+    </script>
+</body>
+</html>
